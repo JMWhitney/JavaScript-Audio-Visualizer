@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Audio Visualizer</title>
+    <script src="visualizer.js"></script>
+    <style src="visualizer.css"></style>
+</head>
+
+<div id="content">
+     <input type="file" id="thefile" accept="audio/*" />
+     <canvas id="canvas"></canvas>
+     <br>
+    <audio id="audio" controls></audio>
+    
+    <div>
+        <!-----
+        <button onclick="document.getElementById('audio').play()">Play</button>
+        <button onclick="document.getElementById('audio').pause()">Pause</button>
+        <div class="slidecontainer">
+            <input type="range" min="0" max="1000" value="0" class="slider" id="myRange" name="time">
+        </div>
+        --->
+        <button onclick="document.getElementById('audio').volume += 0.1">volume +</button>
+        <button onclick="document.getElementById('audio').volume -= 0.1">volume -</button>
+    
+        <br>
+        <h3>FFT Band Resolution</h3>
+        <input type="button" onclick="getfftSize(256)" id="256"  value="256"></input>
+        <input type="button" onclick="getfftSize(512)" id="512"  value="512"></input>
+        <input type="button" onclick="getfftSize(1024)" id="1024"  value="1024"></input>
+        <input type="button" onclick="getfftSize(2048)" id="2048"  value="2048"></input>
+        <input type="button" onclick="getfftSize(4096)" id="4096"  value="4096"></input>
+        
+    </div>
+
+ </div>
+
+ </html>
